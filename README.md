@@ -26,7 +26,7 @@
    cd Django-Authentication-and-Authorization-App
 
 2. **Install dependencies**
-   `pip install -r requirements.txt`
+   `pip install -r requirements.txt` \n\n\n\n\n\n
 
 3. **Apply database migrations**
    `python manage.py makemigrations`
