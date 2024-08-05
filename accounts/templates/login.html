@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Login</title>
+{% endblock %}
+{% block body %}
+{% for mess in messages %}
+<div class="container col-lg-5 bg-danger text-light font-weight-bolder text-center p-3 mt-3 rounded shadow-lg   ">
+    <li>{{mess}}</li>
+</div>
+{% endfor %}
+{% for error in form.non_field_errors %}
+<div class="container col-lg-5 bg-danger text-light font-weight-bolder text-center p-3 mt-3 rounded shadow-lg  ">
+    <li> {{error}}</li>
+</div>
+{% endfor %}
+<div class="container">
+    <form action="{% url 'login' %}" method="post"
+        class="form-group mt-2 col-lg-7 rounded shadow-lg text-light mx-auto bg-primary p-3">
+        {% csrf_token %}
+        {% for fm in form %}
+        {{ fm.label_tag }}
+        {{fm}}
+        {{ fm.errors }}
+        {% endfor %}
+        <a href="{% url 'password_reset' %}" class=" text-light font-italic ">Forgot password</a>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-success form-control mt-3">Login</button>
+        </div>
+
+        <p class="text-center">
+            <a href="{% url 'register' %}" class=" text-light ">Don't have an account? Create here!</a>
+        </p>
+    </form>
+</div>
+
+{% endblock %}

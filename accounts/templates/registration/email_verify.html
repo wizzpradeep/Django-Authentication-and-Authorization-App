@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>email verified</title>
+{% endblock %}
+{% block body %}
+{% for mess in messages %}
+<div class="container col-lg-5 bg-danger text-light font-weight-bolder text-center p-3 mt-3 rounded shadow-lg   ">
+    <li>{{mess}}</li>
+</div>
+{% endfor %}
+<div class="container bg-primary mt-3 p-3 rounded shadow-lg">
+    <h2 class="text-center text-light">Your account has been verified</h2>
+    <h2 class="text-center"><a class="text-light badge badge-dark p-2" href="{% url 'login' %}">Login</a></h2>
+</div>
+
+{% endblock %}
