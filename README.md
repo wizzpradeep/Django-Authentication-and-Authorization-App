@@ -22,20 +22,25 @@
 ### Setup
 
 1. **Clone the repository**
+
    git clone https://github.com/wizzpradeep/Django-Authentication-and-Authorization-App
    cd Django-Authentication-and-Authorization-App
 
 2. **Install dependencies**
-   `pip install -r requirements.txt` \n\n\n\n\n\n
+
+   `pip install -r requirements.txt`
 
 3. **Apply database migrations**
+
    `python manage.py makemigrations`
    `python manage.py migrate`
 
 4. **Create a superuser (optional, for admin access)**
+
    `python manage.py createsuperuser`
 
 5. **Configure Email Settings**
+
    `EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'`
    `EMAIL_HOST = 'your_email_host'`  
    `EMAIL_PORT = your_email_port`  
@@ -44,4 +49,5 @@
    `EMAIL_HOST_PASSWORD = 'your_email/app_host_password'` # Your email/app password
 
 6. **Run the development server**
+
    `python manage.py runserver`
