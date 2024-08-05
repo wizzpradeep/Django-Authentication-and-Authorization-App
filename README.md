@@ -22,7 +22,8 @@
 ### Setup
 
 1. **Clone the repository**
-   git clone https://github.com/wizzpradeepDjango-Authentication-and-Authorization-App.git
+   git clone https://github.com/wizzpradeep/Django-Authentication-and-Authorization-App
+   cd Django-Authentication-and-Authorization-App
 
 2. **Install dependencies**
    pip install -r requirements.txt
